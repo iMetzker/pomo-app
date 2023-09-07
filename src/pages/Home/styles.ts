@@ -50,6 +50,10 @@ const BaseInput = styled.input`
 
 export const TaskInput = styled(BaseInput)`
 flex: 1; // O elemento vai ocupar o máximo de espaço possível
+
+&::-webkit-calendar-picker-indicator {
+    display: none !important; // retira a flexinha do input
+}
 `;
 
 export const MinutesAmountInput = styled(BaseInput)`
