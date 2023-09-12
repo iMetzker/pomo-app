@@ -9,46 +9,69 @@ import {
   MinutesAmountInput,
 } from "./styles";
 import { useForm } from "react-hook-form";
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as zod from 'zod';
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as zod from "zod";
+import { useState } from "react";
+
+// criando um schema de validação, utilizando o zod
+// zod.object pq está sendo  retornado um objeto em handleCreateNewCycle com as duas informações de register
+const newCicleFormValidationSchema = zod.object({
+  task: zod.string().min(1, "Informe a tarefa"),
+  minutesAmount: zod
+    .number()
+    .min(5, "O ciclo precisa ter no mínimo 5 minutos")
+    .max(60, "O ciclo precisa ter no máximo 60 minutos"),
+});
+
+// utilizando o potencial do zod em se integrar ao typescript, extraindo do schema a typagem
+type NewCycleFormData = zod.infer<typeof newCicleFormValidationSchema>;
+
+interface Cycle {
+  id: string;
+  task: string;
+  minutesAmount: number;
+}
 
 export function Home() {
+  const [cycles, setCycles] = useState<Cycle[]>([]);
+  const [activeCycleId, setActiveCycleId] = useState<string | null>(null);
+  const [amountSecondsPassed, setAmountSecondsPassed] = useState(0);
 
-  // criando um schema de validação, utilizando o zod 
-  // zod.object pq está sendo  retornado um objeto em handleCreateNewCycle com as duas informações de register
-  const newCicleFormValidationSchema = zod.object({
-    task: zod
-      .string()
-      .min(1, 'Informe a tarefa'),
-    minutesAmount: zod
-      .number()
-      .min(5, 'O ciclo precisa ter no mínimo 5 minutos')
-      .max(60, 'O ciclo precisa ter no máximo 60 minutos'),
-  })
-
-  // interface NewCycleFormData {
-  //   task: string
-  //   minutesAmount: number
-  // }
-
-  // utilizando o potencial do zod em se integrar ao typescript, extraindo do schema a typagem
-  type NewCycleFormData = zod.infer<typeof newCicleFormValidationSchema>
-  
   // register  recebe um nome do input e retorna alguns métodos para trabalharmos com input : onChange, onBlur, onFocus ...
-  const { register, handleSubmit, watch, formState } = useForm<NewCycleFormData>({
-    resolver: zodResolver(newCicleFormValidationSchema),
-    defaultValues: {
-      task: '',
-      minutesAmount: 0,
-    }
-  }); // retorna um objeto
+  const { register, handleSubmit, watch, formState, reset } =
+    useForm<NewCycleFormData>({
+      resolver: zodResolver(newCicleFormValidationSchema),
+      defaultValues: {
+        task: "",
+        minutesAmount: 0,
+      },
+    }); // retorna um objeto
 
   // data recebe os dados que são retornados
   function handleCreateNewCycle(data: NewCycleFormData) {
-    console.log(data);
+    const newCycle: Cycle = {
+      id: String(new Date().getTime()),
+      task: data.task,
+      minutesAmount: data.minutesAmount,
+    };
+
+    setCycles((state) => [...state, newCycle]);
+    setActiveCycleId(newCycle.id);
+    reset(); // volta para os  valores definidos em defaultValues
   }
 
-  console.log(formState.errors)
+  const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId);
+
+  const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0;
+  const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0;
+
+  const minutesAmount = Math.floor(currentSeconds / 60); // arredonda para baixo
+  const secondsAmount = currentSeconds % 60;
+
+  const minutes = String(minutesAmount).padStart(2, "0"); // padStart preencheuma string com algum caracter específico caso ela não tenha (primeiro parâmetro = tamanho que deve ter, secundo parâmetro = com o que deve ser preenchido)
+  const seconds = String(secondsAmount).padStart(2, "0");
+
+  // console.log(formState.errors) // acessa a variável errors
   // watch observa  os campos, parecido com o useState / observa o campo nomeado pelo {...register('task')}
   const task = watch("task");
   const isSubmitDisabled = !task;
@@ -86,11 +109,11 @@ export function Home() {
         </FormContainer>
 
         <CountDownContainer>
-          <span>0</span>
-          <span>0</span>
+          <span>{minutes[0]}</span>
+          <span>{minutes[1]}</span>
           <Separator>:</Separator>
-          <span>0</span>
-          <span>0</span>
+          <span>{seconds[0]}</span>
+          <span>{seconds[1]}</span>
         </CountDownContainer>
 
         <StartCountdownButton disabled={isSubmitDisabled} type="submit">
