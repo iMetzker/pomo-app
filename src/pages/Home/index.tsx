@@ -8,17 +8,32 @@ import {
   TaskInput,
   MinutesAmountInput,
 } from "./styles";
+import { useForm } from "react-hook-form";
 
 export function Home() {
+  // register  recebe um nome do input e retorna alguns métodos para trabalharmos com input : onChange, onBlur, onFocus ...
+
+  const { register, handleSubmit, watch } = useForm(); // retorna um objeto
+
+  // data são os dados que são retornados
+  function handleCreateNewCycle(data: any) {
+    console.log(data);
+  }
+
+  // observar  os campos parecido com o useState
+  const task = watch("task");
+  const isSubmitDisabled = !task;
+
   return (
     <Homecontainer>
-      <form action="">
+      <form onSubmit={handleSubmit(handleCreateNewCycle)} action="">
         <FormContainer>
           <label htmlFor="task">Vou trabalhar em</label>
           <TaskInput
             id="task"
             list="task-sugestions"
             placeholder="Dê um nome para o seu projeto"
+            {...register("task")}
           />
 
           <datalist id="task-sugestions">
@@ -35,6 +50,7 @@ export function Home() {
             min={5}
             max={60}
             placeholder="00"
+            {...register("minutesAmount", { valueAsNumber: true })}
           />
 
           <span>minutos.</span>
@@ -48,7 +64,7 @@ export function Home() {
           <span>0</span>
         </CountDownContainer>
 
-        <StartCountdownButton disabled type="submit">
+        <StartCountdownButton disabled={isSubmitDisabled} type="submit">
           <Play size={24} />
           Começar
         </StartCountdownButton>
