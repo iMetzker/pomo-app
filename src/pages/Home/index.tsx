@@ -28,10 +28,10 @@ const newCicleFormValidationSchema = zod.object({
 type NewCycleFormData = zod.infer<typeof newCicleFormValidationSchema>;
 
 interface Cycle {
-  id: string
-  task: string
-  minutesAmount: number
-  startDate: Date
+  id: string;
+  task: string;
+  minutesAmount: number;
+  startDate: Date;
 }
 
 export function Home() {
@@ -40,36 +40,45 @@ export function Home() {
   const [amountSecondsPassed, setAmountSecondsPassed] = useState(0);
 
   // register  recebe um nome do input e retorna alguns métodos para trabalharmos com input : onChange, onBlur, onFocus ...
-  const { register, handleSubmit, watch, reset } =
-    useForm<NewCycleFormData>({
-      resolver: zodResolver(newCicleFormValidationSchema),
-      defaultValues: {
-        task: "",
-        minutesAmount: 0,
-      },
-    }); // retorna um objeto
+  const { register, handleSubmit, watch, reset } = useForm<NewCycleFormData>({
+    resolver: zodResolver(newCicleFormValidationSchema),
+    defaultValues: {
+      task: "",
+      minutesAmount: 0,
+    },
+  }); // retorna um objeto
 
   const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId);
-  
+
   useEffect(() => {
+    let interval: number;
+
     if (activeCycle) {
-      setInterval(() => {
-        setAmountSecondsPassed(differenceInSeconds(new Date(), activeCycle.startDate))
-      }, 1000)
+      interval = setInterval(() => {
+        setAmountSecondsPassed(
+          differenceInSeconds(new Date(), activeCycle.startDate)
+        );
+      }, 1000);
     }
-  }, [activeCycle])
-  
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [activeCycle]);
+
   // data recebe os dados que são retornados
   function handleCreateNewCycle(data: NewCycleFormData) {
     const newCycle: Cycle = {
       id: String(new Date().getTime()),
       task: data.task,
       minutesAmount: data.minutesAmount,
-      startDate: new Date()
+      startDate: new Date(),
     };
 
     setCycles((state) => [...state, newCycle]);
     setActiveCycleId(newCycle.id);
+    setAmountSecondsPassed(0);
+
     reset(); // volta para os  valores definidos em defaultValues
   }
 
