@@ -11,7 +11,8 @@ import {
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as zod from "zod";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { differenceInSeconds } from "date-fns";
 
 // criando um schema de validação, utilizando o zod
 // zod.object pq está sendo  retornado um objeto em handleCreateNewCycle com as duas informações de register
@@ -27,9 +28,10 @@ const newCicleFormValidationSchema = zod.object({
 type NewCycleFormData = zod.infer<typeof newCicleFormValidationSchema>;
 
 interface Cycle {
-  id: string;
-  task: string;
-  minutesAmount: number;
+  id: string
+  task: string
+  minutesAmount: number
+  startDate: Date
 }
 
 export function Home() {
@@ -38,7 +40,7 @@ export function Home() {
   const [amountSecondsPassed, setAmountSecondsPassed] = useState(0);
 
   // register  recebe um nome do input e retorna alguns métodos para trabalharmos com input : onChange, onBlur, onFocus ...
-  const { register, handleSubmit, watch, formState, reset } =
+  const { register, handleSubmit, watch, reset } =
     useForm<NewCycleFormData>({
       resolver: zodResolver(newCicleFormValidationSchema),
       defaultValues: {
@@ -47,20 +49,29 @@ export function Home() {
       },
     }); // retorna um objeto
 
+  const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId);
+  
+  useEffect(() => {
+    if (activeCycle) {
+      setInterval(() => {
+        setAmountSecondsPassed(differenceInSeconds(new Date(), activeCycle.startDate))
+      }, 1000)
+    }
+  }, [activeCycle])
+  
   // data recebe os dados que são retornados
   function handleCreateNewCycle(data: NewCycleFormData) {
     const newCycle: Cycle = {
       id: String(new Date().getTime()),
       task: data.task,
       minutesAmount: data.minutesAmount,
+      startDate: new Date()
     };
 
     setCycles((state) => [...state, newCycle]);
     setActiveCycleId(newCycle.id);
     reset(); // volta para os  valores definidos em defaultValues
   }
-
-  const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId);
 
   const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0;
   const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0;
