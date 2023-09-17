@@ -122,7 +122,7 @@ export function Home() {
   // mudando o tittle para aparecer a minutagem
   useEffect(() => {
     if (activeCycle) {
-      document.title = `${minutes}:${seconds} - Hora de focar!`;
+      document.title = `${minutes}:${seconds} - ${activeCycle?.task}`;
       console.log(task);
     }
   }, [minutes, seconds, activeCycle]);
@@ -174,6 +174,12 @@ export function Home() {
 
           <span>minutos.</span>
         </FormContainer>
+
+        {activeCycle && (
+          <>
+            <h1>{activeCycle?.task}</h1>
+          </>
+        )}
 
         <CountDownContainer>
           <span>{minutes[0]}</span>
