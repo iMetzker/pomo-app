@@ -1,13 +1,18 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { CountDownContainer, Separator } from "./style";
 import { differenceInSeconds } from "date-fns";
 import { CyclesContext } from "../..";
 
-export function CountDown() {
-  const { activeCycle, activeCycleId, markCurrentCycleAsFinished } =
-    useContext(CyclesContext);
+import finishSvg from  '../../../../assets/icon-finish.svg'
 
-  const [amountSecondsPassed, setAmountSecondsPassed] = useState(0);
+export function CountDown() {
+  const {
+    activeCycle,
+    activeCycleId,
+    markCurrentCycleAsFinished,
+    amountSecondsPassed,
+    setSecondsPassed,
+  } = useContext(CyclesContext);
 
   const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0;
 
@@ -23,10 +28,10 @@ export function CountDown() {
 
         if (secondsDifference >= totalSeconds) {
           markCurrentCycleAsFinished();
-          setAmountSecondsPassed(totalSeconds);
+          setSecondsPassed(totalSeconds);
           clearInterval(interval);
         } else {
-          setAmountSecondsPassed(secondsDifference);
+          setSecondsPassed(secondsDifference);
         }
       }, 1000);
     }
@@ -35,7 +40,7 @@ export function CountDown() {
     return () => {
       clearInterval(interval);
     };
-  }, [activeCycle, totalSeconds, activeCycleId, markCurrentCycleAsFinished]);
+  }, [activeCycle, totalSeconds, activeCycleId, markCurrentCycleAsFinished, setSecondsPassed]);
 
   const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0;
 
@@ -48,6 +53,13 @@ export function CountDown() {
   useEffect(() => {
     if (activeCycle) {
       document.title = `${minutes}:${seconds} - ${activeCycle?.task}`;
+
+      if (minutes === '00' && seconds === '00') {
+        const link = document.querySelector("link[rel~='icon']") as HTMLLinkElement | null;
+        if (link) {
+          link.href = finishSvg;
+        }
+      }
     }
   }, [minutes, seconds, activeCycle]);
 
