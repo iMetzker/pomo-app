@@ -1,9 +1,7 @@
 import { useContext, useEffect } from "react";
 import { CountDownContainer, Separator } from "./style";
 import { differenceInSeconds } from "date-fns";
-import { CyclesContext } from "../..";
-
-import finishSvg from  '../../../../assets/icon-finish.svg'
+import { CyclesContext } from "../../../../contexts/CyclesContext";
 
 export function CountDown() {
   const {
@@ -53,13 +51,6 @@ export function CountDown() {
   useEffect(() => {
     if (activeCycle) {
       document.title = `${minutes}:${seconds} - ${activeCycle?.task}`;
-
-      if (minutes === '00' && seconds === '00') {
-        const link = document.querySelector("link[rel~='icon']") as HTMLLinkElement | null;
-        if (link) {
-          link.href = finishSvg;
-        }
-      }
     }
   }, [minutes, seconds, activeCycle]);
 
