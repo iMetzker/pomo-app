@@ -1,10 +1,9 @@
 import { HeaderContainer } from "./styles";
-import { Timer, Scroll } from "phosphor-react";
+import { Timer, Scroll, Coffee } from "phosphor-react";
 import { NavLink } from "react-router-dom";
 import { format } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
 import IconHeader from "../../assets/test3-removebg-preview (1).png";
-
 
 export function Header() {
   const data = new Date();
@@ -42,6 +41,10 @@ export function Header() {
       <nav>
         <NavLink to="/" title="Timer">
           <Timer size={24} />
+        </NavLink>
+
+        <NavLink to="/coffee-break" title="Coffee Break">
+          <Coffee size={24} />
         </NavLink>
 
         <NavLink to="/history" title="Histórico">
