@@ -27,6 +27,7 @@ interface CyclesContextType {
   setSecondsPassed: (seconds: number) => void;
   createNewCycle: (data: CreateCycleData) => void;
   interruptCurrentCycle: () => void;
+  deleteCycle: (cycleIdToDelete: string) => void;
 }
 
 export const CyclesContext = createContext({} as CyclesContextType);
@@ -42,6 +43,11 @@ export function CyclesContextProvider({
 
   function setSecondsPassed(seconds: number) {
     setAmountSecondsPassed(seconds);
+  }
+
+  function deleteCycle(cycleIdToDelete: string) {
+    const updatedCycles = cycles.filter((cycle) => cycle.id !== cycleIdToDelete);
+    setCycles(updatedCycles);
   }
 
   function markCurrentCycleAsFinished() {
@@ -67,8 +73,6 @@ export function CyclesContextProvider({
     setCycles((state) => [...state, newCycle]);
     setActiveCycleId(newCycle.id);
     setAmountSecondsPassed(0);
-
-    // reset();
   }
 
   function interruptCurrentCycle() {
@@ -89,6 +93,7 @@ export function CyclesContextProvider({
     <CyclesContext.Provider
       value={{
         cycles,
+        deleteCycle,
         activeCycle,
         activeCycleId,
         markCurrentCycleAsFinished,
