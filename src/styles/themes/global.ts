@@ -25,4 +25,12 @@ body, input, textarea, button {
     font-size: 1rem;
 }
 
+body.popup-open {
+  pointer-events: none;
+}
+
+.popup-container {
+  pointer-events: auto;
+}
+
 `
