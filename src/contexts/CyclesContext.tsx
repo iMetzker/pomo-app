@@ -39,7 +39,7 @@ export function CyclesContextProvider({
   const [activeCycleId, setActiveCycleId] = useState<string | null>(null);
   const [amountSecondsPassed, setAmountSecondsPassed] = useState(0);
 
-  const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId);
+  const activeCycle = cycles.find(cycle => cycle.id === activeCycleId);
 
   function setSecondsPassed(seconds: number) {
     setAmountSecondsPassed(seconds);
@@ -60,6 +60,9 @@ export function CyclesContextProvider({
         }
       })
     );
+
+    /* reset para o ciclo finalizado atualizar o formulário */
+    setActiveCycleId(null);
   }
 
   function createNewCycle(data: CreateCycleData) {

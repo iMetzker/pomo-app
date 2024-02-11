@@ -7,6 +7,9 @@ import IconHeader from "../../assets/test3-removebg-preview (1).png";
 
 export function Header() {
   const data = new Date();
+  const currentDate = format(data, "d 'de' LLLL 'de' yyyy ", {
+    locale: ptBR,
+  });
 
   function dayText(day: number) {
     const dayTextNow = [
@@ -26,10 +29,6 @@ export function Header() {
     const nameDay = dayText(dayNow);
     return `${nameDay}`;
   }
-
-  const currentDate = format(data, "d 'de' LLLL 'de' yyyy ", {
-    locale: ptBR,
-  });
 
   return (
     <HeaderContainer>

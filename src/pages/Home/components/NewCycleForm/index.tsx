@@ -15,8 +15,8 @@ export function NewCycleForm() {
           id="task"
           list="task-sugestions"
           placeholder="Dê um nome para o seu projeto"
-          {...register("task")}
           disabled={!!activeCycle}
+          {...register("task")}
         />
 
         <datalist id="task-sugestions">
@@ -29,12 +29,12 @@ export function NewCycleForm() {
         <MinutesAmountInput
           id="minutesAmout"
           type="number"
+          disabled={!!activeCycle}
           step={5}
           min={5}
           max={60}
           placeholder="00"
           {...register("minutesAmount", { valueAsNumber: true })}
-          disabled={!!activeCycle}
         />
 
         <span>minutos.</span>

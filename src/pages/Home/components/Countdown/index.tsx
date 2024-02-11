@@ -13,11 +13,16 @@ export function CountDown() {
   } = useContext(CyclesContext);
 
   const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0;
+  const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0;
+  const minutesAmount = Math.floor(currentSeconds / 60);
+  const secondsAmount = currentSeconds % 60;
+  const minutes = String(minutesAmount).padStart(2, "0");
+  const seconds = String(secondsAmount).padStart(2, "0");
 
   useEffect(() => {
     let interval: number;
 
-    if (activeCycle) {
+    if (activeCycle) {      
       interval = setInterval(() => {
         const secondsDifference = differenceInSeconds(
           new Date(),
@@ -40,17 +45,11 @@ export function CountDown() {
     };
   }, [activeCycle, totalSeconds, activeCycleId, markCurrentCycleAsFinished, setSecondsPassed]);
 
-  const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0;
-
-  const minutesAmount = Math.floor(currentSeconds / 60);
-  const secondsAmount = currentSeconds % 60;
-
-  const minutes = String(minutesAmount).padStart(2, "0");
-  const seconds = String(secondsAmount).padStart(2, "0");
-
   useEffect(() => {
     if (activeCycle) {
       document.title = `${minutes}:${seconds} - ${activeCycle?.task}`;
+    } else {
+      document.title = `Pomo App - Time To Focus!`;
     }
   }, [minutes, seconds, activeCycle]);
 
