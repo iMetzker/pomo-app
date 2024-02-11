@@ -45,8 +45,8 @@ export const HeaderContainer = styled.header`
 
   img {
     object-fit: contain;
-    width: 70px;
-    height: 70px;
+    width: 110px;
+    height: 110px;
     transform: scaleX(-1);
   }
 `;

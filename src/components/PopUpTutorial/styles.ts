@@ -71,7 +71,16 @@ export const PopupContent = styled.div`
     }
 
     span {
-      margin-right: 0.3rem;
+      margin: 0.2rem 0.3rem;
+      width: 2.1rem;
+      height: 2.1rem;
+      padding: 0.1rem;
+      border:1px solid ${(props) => props.theme["gray-800"]};
+      border-radius: 8px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 

@@ -52,7 +52,7 @@ export function PopUpTutorial() {
             conceitos do Pomodoro, uma técnica de gerenciamento de tempo que
             pode ajudá-lo a se concentrar em qualquer tarefa, como estudar,
             escrever, programar ou pesquisar, através de intervalos
-            cronometrados, conhecidos como "ciclos".
+            cronometrados, conhecidos como "ciclos". <a href="https://ufsb.edu.br/proaf/proaf/dace/cqv/setor-de-promocao-a-saude-estudantil/acao-bem-estar/tecnica-pomodoro-voce-sabe-o-que-e-isso" target="_blank" >Saiba mais aqui.</a>
           </p>
           <p>
             O aplicativo oferece uma abordagem flexível, permitindo a
@@ -60,6 +60,7 @@ export function PopUpTutorial() {
             preferências, possibilitando a transição de ciclos curtos para
             sessões de foco mais extensas.
           </p>
+          <br />
 
           <h3>Quem está por trás da técnica?</h3>
           <p>
@@ -68,6 +69,7 @@ export function PopUpTutorial() {
             concentrados de trabalho são mais eficazes. Você pode se surpreender
             com os resultados que pode alcançar apenas gerenciando seu tempo!
           </p>
+          <br /> <br />
           <h2>Guia de Utilização</h2>
           <p>
             <span>
@@ -103,6 +105,7 @@ export function PopUpTutorial() {
             gerenciar seu tempo e realizar suas tarefas de maneira mais
             eficiente.
           </p>
+          <br /> <br />
           <h2>Deixe Um Feedback</h2>
           <p>
             Para mandar sugestões, dúvidas ou deixar uma mensagem maneira{" "}

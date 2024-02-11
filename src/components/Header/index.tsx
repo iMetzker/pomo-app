@@ -3,7 +3,7 @@ import { Timer, Scroll, Coffee } from "phosphor-react";
 import { NavLink } from "react-router-dom";
 import { format } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
-import IconHeader from "../../assets/test3-removebg-preview (1).png";
+import IconHeader from "../../assets/icons/dark-theme.svg";
 
 export function Header() {
   const data = new Date();
