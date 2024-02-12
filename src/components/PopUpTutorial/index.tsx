@@ -5,7 +5,13 @@ import {
   CloseButton,
   OpenTutorialBtn,
 } from "./styles";
-import { Question, X, Timer, Scroll, Coffee } from "phosphor-react";
+import {
+  Question,
+  X,
+  Timer,
+  Scroll,
+  Coffee
+} from "phosphor-react";
 import { useEffect, useState } from "react";
 
 export function PopUpTutorial() {
@@ -37,6 +43,7 @@ export function PopUpTutorial() {
       <OpenTutorialBtn
         onClick={openPopup}
         className={isPopupOpen ? "active" : ""}
+        title="Ajuda"
       >
         <Question size={25} />
       </OpenTutorialBtn>
@@ -52,7 +59,13 @@ export function PopUpTutorial() {
             conceitos do Pomodoro, uma técnica de gerenciamento de tempo que
             pode ajudá-lo a se concentrar em qualquer tarefa, como estudar,
             escrever, programar ou pesquisar, através de intervalos
-            cronometrados, conhecidos como "ciclos". <a href="https://ufsb.edu.br/proaf/proaf/dace/cqv/setor-de-promocao-a-saude-estudantil/acao-bem-estar/tecnica-pomodoro-voce-sabe-o-que-e-isso" target="_blank" >Saiba mais aqui.</a>
+            cronometrados, conhecidos como "ciclos".{" "}
+            <a
+              href="https://ufsb.edu.br/proaf/proaf/dace/cqv/setor-de-promocao-a-saude-estudantil/acao-bem-estar/tecnica-pomodoro-voce-sabe-o-que-e-isso"
+              target="_blank"
+            >
+              Saiba mais aqui.
+            </a>
           </p>
           <p>
             O aplicativo oferece uma abordagem flexível, permitindo a
@@ -61,7 +74,6 @@ export function PopUpTutorial() {
             sessões de foco mais extensas.
           </p>
           <br />
-
           <h3>Quem está por trás da técnica?</h3>
           <p>
             A técnica Pomodoro foi introduzida por Francesco Cirillo no final

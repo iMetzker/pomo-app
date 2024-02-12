@@ -49,37 +49,42 @@ export function Sounds() {
     <SoundsContainer>
       <button
         onClick={() => handleButtonClick(AmbientSound)}
-        className={currentMusic === AmbientSound ? "active" : ""}
+        className={currentMusic === AmbientSound ? "active" : ""} title="Música ambiente"
       >
         <MusicNoteSimple size={24} />
       </button>
       <button
         onClick={() => handleButtonClick(NightSound)}
         className={currentMusic === NightSound ? "active" : ""}
+        title="Sons noite tranquila"
       >
         <MoonStars size={24} />
       </button>
       <button
         onClick={() => handleButtonClick(OceanSound)}
         className={currentMusic === OceanSound ? "active" : ""}
+        title="Sons do oceano"
       >
         <Boat size={24} />
       </button>
       <button
         onClick={() => handleButtonClick(FireSound)}
         className={currentMusic === FireSound ? "active" : ""}
+        title="Sons de fogueira"
       >
         <Fire size={24} />
       </button>
       <button
         onClick={() => handleButtonClick(RainSound)}
         className={currentMusic === RainSound ? "active" : ""}
+        title="Sons de chuva"
       >
         <CloudRain size={24} />
       </button>
       <button
         onClick={() => handleButtonClick(NatureSound)}
         className={currentMusic === NatureSound ? "active" : ""}
+        title="Sons da natureza"
       >
         <Tree size={24} />
       </button>

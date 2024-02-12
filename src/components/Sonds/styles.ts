@@ -40,11 +40,5 @@ export const SoundsContainer = styled.div`
         color: ${(props) => props.theme["purple-400"]};
       }
     }
-
-    &.default {
-      svg {
-        color: ${(props) => props.theme["gray-400"]};
-      }
-    }
   }
 `;
