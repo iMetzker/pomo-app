@@ -2,8 +2,10 @@ import { FormContainer, MinutesAmountInput } from "../../../Home/components/NewC
 import { useContext } from "react";
 import { CyclesContext } from "../../../../contexts/CyclesContext";
 import { useFormContext } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 export function CycleBreak() {
+  const { t } = useTranslation();
   const { activeCycle } = useContext(CyclesContext);
   const { register } = useFormContext();
 
@@ -11,7 +13,7 @@ export function CycleBreak() {
     <>
       <FormContainer>
 
-        <label htmlFor="minutesAmout">Fazer uma pausa por</label>
+        <label htmlFor="minutesAmout">{t("break")}</label>
         <MinutesAmountInput
           id="minutesAmout"
           type="number"
@@ -23,7 +25,7 @@ export function CycleBreak() {
           disabled={!!activeCycle}
         />
 
-        <span>minutos.</span>
+        <span>{t("minutes")}.</span>
       </FormContainer>
     </>
   );

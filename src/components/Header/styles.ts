@@ -32,17 +32,6 @@ export const HeaderContainer = styled.header`
     }
   }
 
-  div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    h1 {
-      font-family: "Roboto Mono", monospace;
-    }
-  }
-
   img {
     object-fit: contain;
     width: 110px;

@@ -17,11 +17,11 @@ export function SwitchLanguage() {
       value: "en",
     },
     {
-      name: "Spanish",
+      name: "Español",
       value: "es",
     },
     {
-      name: "French",
+      name: "Français",
       value: "fr",
     },
   ];

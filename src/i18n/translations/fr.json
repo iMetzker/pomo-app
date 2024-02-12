@@ -1,5 +1,32 @@
 {
     "translation": {
-        "developed": "Développé par Ivny Metzker"
+        "developed": "Développé par Ivny Metzker",
+        "interrupt": "Interrompre",
+        "play": "Commencer",
+
+        "will-work":"Je vais travailler sur",
+        "project-name": "Donnez un nom à votre projet",
+        "during": "pendant",
+        "minutes": "minutes",
+        "break": "Faites une pause pour",
+
+        "history": "Mon histoire",
+        "task": "Tâche",
+        "duration": "Durée",
+        "start": "Commencer",
+        "status": "Status",
+        "concluded": "Conclu",
+        "tnterrupted": "Interrompu",
+        "in-progress": "En cours",
+
+        "date-format": "d MMMM yyyy",
+        "date-locale": "fr",
+        "day-name-sunday": "Dimanche",
+        "day-name-second": "Lundi",
+        "day-name-third": "Mardi",
+        "day-name-fourth": "Mercredi",
+        "day-name-fifth": "Jeudi",
+        "day-name-friday": "Vendredi",
+        "day-name-saturday": "Samedi"
     }
 }

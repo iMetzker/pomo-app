@@ -1,42 +1,15 @@
 import { HeaderContainer } from "./styles";
 import { Timer, Scroll, Coffee } from "phosphor-react";
 import { NavLink } from "react-router-dom";
-import { format } from "date-fns";
-import ptBR from "date-fns/locale/pt-BR";
 import IconHeader from "../../assets/icons/dark-theme.svg";
+import { DataFormat } from "../DataFormat";
 
 export function Header() {
-  const data = new Date();
-  const currentDate = format(data, "d 'de' LLLL 'de' yyyy ", {
-    locale: ptBR,
-  });
-
-  function dayText(day: number) {
-    const dayTextNow = [
-      "Domingo",
-      "Segunda-feira",
-      "Terça-feira",
-      "Quarta-feira",
-      "Quinta-feira",
-      "Sexta-feira",
-      "Sábado",
-    ];
-    return dayTextNow[day];
-  }
-
-  function createTextDay(data: Date) {
-    const dayNow = data.getDay();
-    const nameDay = dayText(dayNow);
-    return `${nameDay}`;
-  }
 
   return (
     <HeaderContainer>
       <img src={IconHeader} alt="" />
-      <div>
-        <h1>{createTextDay(data)}</h1>
-        <p>{currentDate}</p>
-      </div>
+      <DataFormat />
       <nav>
         <NavLink to="/" title="Timer">
           <Timer size={24} />
