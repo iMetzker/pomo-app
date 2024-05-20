@@ -18,4 +18,14 @@ export const LayoutContainer = styled.div`
     font-size: 0.9rem;
     margin: 0 auto;
   }
+
+  p.author {
+    @media (max-width: 835px) {
+      padding-top: 2rem;
+    }
+  }
+
+  @media (max-width: 835px) {
+    height: auto;
+  }
 `;

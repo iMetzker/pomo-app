@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SwitchContainer, LanguageButton, LanguageOptions } from "./styles";
 import { GlobeSimple } from "phosphor-react";
 
 export function SwitchLanguage() {
   const [showOptions, setShowOptions] = useState(false);
-  const { i18n } = useTranslation();
+  const switchRef = useRef(null);
+  const { i18n, t } = useTranslation();
 
   const languageOptions = [
     {
@@ -25,9 +26,24 @@ export function SwitchLanguage() {
       value: "fr",
     },
   ];
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (switchRef.current && !switchRef.current.contains(event.target)) {
+        setShowOptions(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [switchRef]);
+
   return (
-    <SwitchContainer>
-      <LanguageButton onClick={() => setShowOptions(!showOptions)}>
+    <SwitchContainer ref={switchRef}>
+      <LanguageButton onClick={() => setShowOptions(!showOptions)} title={t("select-lang")}>
         <GlobeSimple size={20} />
       </LanguageButton>
 

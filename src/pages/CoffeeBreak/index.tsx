@@ -53,7 +53,7 @@ export function CoffeeBreak() {
           </>
         )}
 
-        <FormProvider {...newCycleForm}>
+        <FormProvider {...newCycleForm} style={{display: activeCycle ? 'none' : 'flex'}}>
           <CycleBreak />
         </FormProvider>
         <CountDown />

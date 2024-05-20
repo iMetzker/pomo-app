@@ -16,6 +16,7 @@ export const LanguageButton = styled.button`
   border: none;
   width: 3rem;
   height: 3rem;
+  cursor: pointer;
 
   display: flex;
   justify-content: center;
@@ -52,5 +53,9 @@ export const LanguageOptions = styled.div`
             transition: ease-in-out 200ms;
         }
     }
+  }
+
+  @media (max-width: 835px) {
+    right: -1rem;
   }
 `;

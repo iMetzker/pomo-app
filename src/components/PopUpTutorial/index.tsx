@@ -10,12 +10,17 @@ import {
   X,
   Timer,
   Scroll,
-  Coffee
+  Coffee,
+  GlobeSimple,
+  MusicNoteSimple
 } from "phosphor-react";
+import iconDark from "../../assets/icons/dark-theme2.svg";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export function PopUpTutorial() {
   const [isPopupOpen, setPopupOpen] = useState(false);
+  const { t } = useTranslation();
 
   const openPopup = () => {
     setPopupOpen(true);
@@ -43,7 +48,7 @@ export function PopUpTutorial() {
       <OpenTutorialBtn
         onClick={openPopup}
         className={isPopupOpen ? "active" : ""}
-        title="Ajuda"
+        title={t("title-help")}
       >
         <Question size={25} />
       </OpenTutorialBtn>
@@ -110,6 +115,27 @@ export function PopUpTutorial() {
             disso, oferecemos a opção de excluir ciclos antigos ou que não façam
             mais sentido estarem alí! A exclusão de ciclos proporciona uma boa
             flexibilidade e personalização ao seu histórico.
+          </p>
+          <p>
+            <span>
+              <GlobeSimple size={21} />
+            </span>{" "}
+            Também é possível alterar a linguagem do aplicativo em um dos 4
+            idiomas disponíveis: Português, Inglês, Espanhol e Francês.
+          </p>
+          <p>
+            <span>
+              <img src={iconDark} alt="" />
+            </span>
+            O aplicativo conta com dois temas um escuro e um claro para que você
+            trabalhe com o que mais te agrade, podendo trocar entre eles.
+          </p>
+          <p>
+            <span>
+              <MusicNoteSimple size={21} />
+            </span>
+            Por fim, ao lado esquerdo você encontrará uma seleção de faixas
+            sonoras para tornar o ambiente mais agradével e te ajudar a se concentrar.
           </p>
           <p>
             Com esse aplicativo, o foco e a produtividade estão ao alcance de

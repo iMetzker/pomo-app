@@ -32,6 +32,10 @@ export const OpenTutorialBtn = styled.button`
       color: ${(props) => props.theme["purple-400"]};
     }
   }
+
+  @media (max-width: 835px) {
+    bottom: 1.5rem;
+  }
 `;
 
 export const PopupContainer = styled.div<{ isOpen: boolean }>`
@@ -75,12 +79,18 @@ export const PopupContent = styled.div`
       width: 2.1rem;
       height: 2.1rem;
       padding: 0.1rem;
-      border:1px solid ${(props) => props.theme["gray-800"]};
+      border: 1px solid ${(props) => props.theme["gray-800"]};
       border-radius: 8px;
 
       display: inline-flex;
       align-items: center;
       justify-content: center;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        transform: scaleX(-1);
+      }
     }
   }
 

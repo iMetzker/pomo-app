@@ -19,6 +19,7 @@
         "tnterrupted": "Interrompido",
         "in-progress": "Em andamento",
 
+        "select-lang": "Selecionar idioma",
         "date-format": "d 'de' LLLL 'de' yyyy",
         "date-locale": "ptBR",
         "day-name-sunday": "Domingo",
@@ -27,7 +28,33 @@
         "day-name-fourth": "Quarta-feira",
         "day-name-fifth": "Quinta-feira",
         "day-name-friday": "Sexta-feira",
-        "day-name-saturday": "Sábado"
+        "day-name-saturday": "Sábado",
+
+        "title-timer": "Timer",
+        "title-coffee-break": "Coffee Break",
+        "title-history": "Histórico",
+        "title-music-env": "Música ambiente",
+        "title-music-night": "Sons noite tranquila",
+        "title-music-ocean": "Sons do oceano",
+        "title-music-fire": "Sons de fogueira",
+        "title-music-rain": "Sons de chuva",
+        "title-music-nat": "Sons da natureza",
+        "title-help": "Ajuda",
+
+        "about-app": "Sobre o Aplicativo",
+        "about-p1":"Trata-se de um aplicativo que permite colocar em prática os conceitos do Pomodoro, uma técnica de gerenciamento de tempo que pode ajudá-lo a se concentrar em qualquer tarefa, como estudar, escrever, programar ou pesquisar, através de intervalos cronometrados, conhecidos como \"ciclos\".",
+        "about-p2": "O aplicativo oferece uma abordagem flexível, permitindo a personalização da duração de cada ciclo de acordo com suas preferências, possibilitando a transição de ciclos curtos para sessões de foco mais extensas.",
+        "more-here": "Saiba mais aqui.",
+        "pomo-author": "Quem está por trás da técnica?",
+        "pomo-p1": "A técnica Pomodoro foi introduzida por Francesco Cirillo no final dos anos 1980 e baseia-se na ideia de que períodos curtos e concentrados de trabalho são mais eficazes. Você pode se surpreender com os resultados que pode alcançar apenas gerenciando seu tempo!",
+        "tutorial": "Guia de Utilização",
+        "tutorial-p1": "Ao abrir o aplicativo, você encontrará um timer na página inicial. Aqui, você pode nomear sua tarefa e definir a quantidade de minutos que deseja dedicar a ela. Quando o tempo chegar a zero, um som será disparado, indicando o final da sessão de trabalho.",
+        "tutorial-p2": "Na segunda tela, reservamos um espaço para descanso, a pausa para o café. Defina quantos minutos deseja relaxar, e quando o tempo se esgotar, um alarme o lembrará de retornar ao trabalho.",
+        "tutorial-p3": "",
+        "tutorial-p4": "",
+        "feedback": "Deixe Um Feedback",
+        "feedback-p1": "Para mandar sugestões, dúvidas ou deixar uma mensagem maneira",
+        "click-here": "clique aqui."
 
     }
 }

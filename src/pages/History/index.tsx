@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { formatDistanceToNow } from "date-fns";
-import ptBR from "date-fns/locale/pt-BR";
+import { ptBR, enUS, es, fr } from 'date-fns/locale';
 import { HistoryContainer, HistoryList, Status } from "./styles";
 import { CyclesContext } from "../../contexts/CyclesContext";
 import { Trash } from "phosphor-react";
@@ -10,6 +10,23 @@ import { useTranslation } from "react-i18next";
 export function History() {
   const { t } = useTranslation();
   const { cycles, deleteCycle } = useContext(CyclesContext);
+  const localeString = t('date-locale');
+  const localeObject = mapLocaleStringToObject(localeString);
+
+  function mapLocaleStringToObject(localeString: string) {
+    switch (localeString) {
+      case 'pt-BR':
+        return ptBR;
+      case 'enUS':
+        return enUS;
+      case 'es':
+        return es;
+      case 'fr':
+        return fr;
+      default:
+        return ptBR;
+    }
+  }
 
   return (
     <HistoryContainer>
@@ -36,7 +53,7 @@ export function History() {
                   <td>
                     {formatDistanceToNow(cycle.startDate, {
                       addSuffix: true,
-                      locale: ptBR,
+                      locale: localeObject,
                     })}
                   </td>
                   <td>

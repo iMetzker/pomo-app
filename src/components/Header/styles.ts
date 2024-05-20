@@ -5,6 +5,14 @@ export const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: 835px) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 1rem;
+    gap: 1rem;
+  }
+
   nav {
     display: flex;
     gap: 0.5rem;

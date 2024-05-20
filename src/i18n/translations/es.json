@@ -19,6 +19,7 @@
         "tnterrupted": "Interrumpido",
         "in-progress": "En proceso",
 
+        "select-lang": "Seleccione el idioma",
         "date-format": "d 'de' LLLL 'de' yyyy",
         "date-locale": "es",
         "day-name-sunday": "Domingo",
@@ -27,6 +28,17 @@
         "day-name-fourth": "Quarta-feira",
         "day-name-fifth": "Quinta-feira",
         "day-name-friday": "Sexta-feira",
-        "day-name-saturday": "Sábado"
+        "day-name-saturday": "Sábado",
+
+        "title-timer": "Timer",
+        "title-coffee-break": "Coffee Break",
+        "title-history": "Histórico",
+
+        "title-music-env": "Música de fondo",
+        "title-music-night": "Sonidos tranquilos de la noche",
+        "title-music-ocean": "Sonidos del océano",
+        "title-music-fire": "Sonidos de hoguera",
+        "title-music-rain": "Sonidos de lluvia",
+        "title-music-nat": "Sonidos de la naturaleza"
     }
 }

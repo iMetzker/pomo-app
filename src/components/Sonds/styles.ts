@@ -41,4 +41,23 @@ export const SoundsContainer = styled.div`
       }
     }
   }
+
+  @media (max-width: 835px) {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    bottom: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 745px) {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    bottom: -5rem;
+    left: 0;
+    
+    transform: translateX(0%);
+  }
 `;

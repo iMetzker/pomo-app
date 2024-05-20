@@ -11,7 +11,7 @@ export function NewCycleForm() {
 
   return (
     <>
-      <FormContainer>
+      <FormContainer style={{display: activeCycle ? 'none' : 'flex'}}>
         <label htmlFor="task">{t("will-work")}</label>
         <TaskInput
           id="task"

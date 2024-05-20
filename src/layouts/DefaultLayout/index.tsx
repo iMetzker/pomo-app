@@ -17,7 +17,7 @@ export function DefaultLayout() {
       <PopUpTutorial />
       <Sounds />
       <Outlet />
-      <p>{t("developed")}</p>
+      <p className="author" >{t("developed")}</p>
     </LayoutContainer>
   );
 }

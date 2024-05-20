@@ -19,6 +19,7 @@
         "tnterrupted": "Interrupted",
         "in-progress": "In progress",
 
+        "select-lang": "Select language",
         "date-format": "MMMM d, yyyy",
         "date-locale": "enUS",
         "day-name-sunday": "Sunday",
@@ -27,6 +28,17 @@
         "day-name-fourth": "Wednesday",
         "day-name-fifth": "Thursday",
         "day-name-friday": "Friday",
-        "day-name-saturday": "Saturday"
+        "day-name-saturday": "Saturday",
+
+        "title-timer": "Timer",
+        "title-coffee-break": "Coffee Break",
+        "title-history": "History",
+
+        "title-music-env": "Background music",
+        "title-music-night": "Quiet night sounds",
+        "title-music-ocean": "Ocean Sounds",
+        "title-music-fire": "Bonfire Sounds",
+        "title-music-rain": "Rain sounds",
+        "title-music-nat": "Nature sounds"
     }
 }
