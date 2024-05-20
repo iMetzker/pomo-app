@@ -14,7 +14,6 @@ import {
   GlobeSimple,
   MusicNoteSimple
 } from "phosphor-react";
-import iconDark from "../../assets/icons/dark-theme2.svg";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -33,11 +32,12 @@ export function PopUpTutorial() {
   useEffect(() => {
     document.body.classList.toggle("popup-open", isPopupOpen);
 
-    const handleOutsideClick = (e) => {
-      if (isPopupOpen && !e.target.closest(".popup-container")) {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (isPopupOpen && e.target && !!(e.target as HTMLElement).closest(".popup-container")) {
         closePopup();
       }
     };
+
     return () => {
       document.removeEventListener("click", handleOutsideClick);
     };
@@ -122,13 +122,6 @@ export function PopUpTutorial() {
             </span>{" "}
             Também é possível alterar a linguagem do aplicativo em um dos 4
             idiomas disponíveis: Português, Inglês, Espanhol e Francês.
-          </p>
-          <p>
-            <span>
-              <img src={iconDark} alt="" />
-            </span>
-            O aplicativo conta com dois temas um escuro e um claro para que você
-            trabalhe com o que mais te agrade, podendo trocar entre eles.
           </p>
           <p>
             <span>
