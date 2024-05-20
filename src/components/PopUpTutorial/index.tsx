@@ -136,12 +136,6 @@ export function PopUpTutorial() {
             gerenciar seu tempo e realizar suas tarefas de maneira mais
             eficiente.
           </p>
-          {/* <br /> <br />
-          <h2>Deixe Um Feedback</h2>
-          <p>
-            Para mandar sugestões, dúvidas ou deixar uma mensagem maneira{" "}
-            <a href="#">clique aqui.</a>
-          </p> */}
         </PopupContent>
       </PopupContainer>
     </TutorialContainer>
