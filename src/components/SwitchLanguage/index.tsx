@@ -5,7 +5,7 @@ import { GlobeSimple } from "phosphor-react";
 
 export function SwitchLanguage() {
   const [showOptions, setShowOptions] = useState(false);
-  const switchRef = useRef(null);
+  const switchRef = useRef<HTMLDivElement>(null);
   const { i18n, t } = useTranslation();
 
   const languageOptions = [
@@ -29,7 +29,7 @@ export function SwitchLanguage() {
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (switchRef.current && !switchRef.current.contains(event.target)) {
+      if (switchRef.current && !switchRef.current.contains(event.target as Node)) {
         setShowOptions(false);
       }
     }
