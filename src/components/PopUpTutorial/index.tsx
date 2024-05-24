@@ -58,83 +58,58 @@ export function PopUpTutorial() {
           <CloseButton onClick={closePopup}>
             <X size={25} />
           </CloseButton>
-          <h2>Sobre o Aplicativo</h2>
+          <h2>{t("about-app")}</h2>
           <p>
-            Trata-se de um aplicativo que permite colocar em prática os
-            conceitos do Pomodoro, uma técnica de gerenciamento de tempo que
-            pode ajudá-lo a se concentrar em qualquer tarefa, como estudar,
-            escrever, programar ou pesquisar, através de intervalos
-            cronometrados, conhecidos como "ciclos".{" "}
+          {t("about-p1")}
             <a
               href="https://ufsb.edu.br/proaf/proaf/dace/cqv/setor-de-promocao-a-saude-estudantil/acao-bem-estar/tecnica-pomodoro-voce-sabe-o-que-e-isso"
               target="_blank"
             >
-              Saiba mais aqui.
+              {t("more-here")}
             </a>
           </p>
           <p>
-            O aplicativo oferece uma abordagem flexível, permitindo a
-            personalização da duração de cada ciclo de acordo com suas
-            preferências, possibilitando a transição de ciclos curtos para
-            sessões de foco mais extensas.
+          {t("about-p2")}
           </p>
           <br />
-          <h3>Quem está por trás da técnica?</h3>
+          <h3>{t("pomo-author")}</h3>
           <p>
-            A técnica Pomodoro foi introduzida por Francesco Cirillo no final
-            dos anos 1980 e baseia-se na ideia de que períodos curtos e
-            concentrados de trabalho são mais eficazes. Você pode se surpreender
-            com os resultados que pode alcançar apenas gerenciando seu tempo!
+          {t("pomo-p1")}
           </p>
           <br /> <br />
-          <h2>Guia de Utilização</h2>
+          <h2>{t("tutorial")}</h2>
           <p>
             <span>
               <Timer size={21} />{" "}
             </span>
-            Ao abrir o aplicativo, você encontrará um timer na página inicial.
-            Aqui, você pode nomear sua tarefa e definir a quantidade de minutos
-            que deseja dedicar a ela. Quando o tempo chegar a zero, um som será
-            disparado, indicando o final da sessão de trabalho.
+            {t("tutorial-p1")}
           </p>
           <p>
             <span>
               <Coffee size={21} />
             </span>{" "}
-            Na segunda tela, reservamos um espaço para descanso, a pausa para o
-            café. Defina quantos minutos deseja relaxar, e quando o tempo se
-            esgotar, um alarme o lembrará de retornar ao trabalho.
+            {t("tutorial-p2")}
           </p>
           <p>
             <span>
               <Scroll size={21} />
             </span>{" "}
-            A última tela exibe todo o histórico de ciclos realizados. Esses
-            ciclos são automaticamente salvos, permitindo que você retome
-            exatamente de onde parou, mesmo após fechar o aplicativo. Além
-            disso, oferecemos a opção de excluir ciclos antigos ou que não façam
-            mais sentido estarem alí! A exclusão de ciclos proporciona uma boa
-            flexibilidade e personalização ao seu histórico.
+            {t("tutorial-p3")}
           </p>
           <p>
             <span>
               <GlobeSimple size={21} />
             </span>{" "}
-            Também é possível alterar a linguagem do aplicativo em um dos 4
-            idiomas disponíveis: Português, Inglês, Espanhol e Francês.
+            {t("tutorial-p4")}
           </p>
           <p>
             <span>
               <MusicNoteSimple size={21} />
             </span>
-            Por fim, ao lado esquerdo você encontrará uma seleção de faixas
-            sonoras para tornar o ambiente mais agradével e te ajudar a se concentrar.
+            {t("tutorial-p5")}
           </p>
           <p>
-            Com esse aplicativo, o foco e a produtividade estão ao alcance de
-            suas mãos, proporcionando uma maneira eficaz e personalizável de
-            gerenciar seu tempo e realizar suas tarefas de maneira mais
-            eficiente.
+          {t("tutorial-p6")}
           </p>
         </PopupContent>
       </PopupContainer>

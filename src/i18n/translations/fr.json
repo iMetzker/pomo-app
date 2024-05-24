@@ -39,6 +39,20 @@
         "title-music-ocean": "Sons de l'océan",
         "title-music-fire": "Sons de feu de joie",
         "title-music-rain": "Bruits de pluie",
-        "title-music-nat": "Les sons de la nature"
+        "title-music-nat": "Les sons de la nature",
+
+        "about-app": "À propos de la demande",
+        "about-p1":"C'est une application qui vous permet de mettre en pratique les concepts de Pomodoro, une technique de gestion du temps qui peut vous aider à vous concentrer sur n'importe quelle tâche, comme étudier, écrire, programmer ou rechercher, à travers des intervalles chronométrés, appelés \"cycles\".",
+        "about-p2": "L'application propose une approche flexible, vous permettant de personnaliser la durée de chaque cycle en fonction de vos préférences, permettant ainsi de passer de cycles courts à des séances de concentration plus longues.",
+        "more-here": "En savoir plus ici.",
+        "pomo-author": "Qui est derrière la technique?",
+        "pomo-p1": "La technique Pomodoro a été introduite par Francesco Cirillo à la fin des années 1980 et repose sur l'idée que des périodes de travail courtes et ciblées sont plus efficaces. Vous pourriez être surpris des résultats que vous pouvez obtenir simplement en gérant votre temps!",
+        "tutorial": "Guide d'utilisation",
+        "tutorial-p1": "Lorsque vous ouvrez l'application, vous trouverez une minuterie sur la page d'accueil. Ici, vous pouvez nommer votre tâche et définir le nombre de minutes que vous souhaitez y consacrer. Lorsque le temps atteint zéro, un son retentit, indiquant la fin de la séance de travail.",
+        "tutorial-p2": "Sur le deuxième écran, on se réserve un espace pour le repos, la pause café. Définissez le nombre de minutes pendant lesquelles vous souhaitez vous détendre et lorsque le temps sera écoulé, une alarme vous rappellera de retourner au travail.",
+        "tutorial-p3": "Le dernier écran affiche l'historique complet des cycles effectués. Ces cycles sont automatiquement enregistrés, vous permettant de reprendre là où vous vous étiez arrêté, même après la fermeture de l'application. De plus, nous offrons la possibilité de supprimer les anciens cycles ou ceux qui n’ont plus de sens ! La suppression de cycles offre une bonne flexibilité et personnalisation de votre historique.",
+        "tutorial-p4": "Il est également possible de changer la langue de l'application pour l'une des 4 langues disponibles : portugais, anglais, espagnol et français.",
+        "tutorial-p5": "Enfin, sur le côté gauche, vous trouverez une sélection de bandes sonores pour rendre l'environnement plus agréable et vous aider à vous concentrer.",
+        "tutorial-p6": "Avec cette application, la concentration et la productivité sont à portée de main, offrant un moyen efficace et personnalisable de gérer votre temps et d'accomplir vos tâches plus efficacement."
     }
 }

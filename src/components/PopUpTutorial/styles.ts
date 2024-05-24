@@ -86,6 +86,10 @@ export const PopupContent = styled.div`
       align-items: center;
       justify-content: center;
 
+      @media (max-width: 800px) {
+        width: 55vw;
+      }
+
       img {
         max-width: 100%;
         max-height: 100%;
@@ -117,6 +121,16 @@ export const PopupContent = styled.div`
   &::-webkit-scrollbar-track {
     background-color: ${(props) => props.theme["gray-700"]};
     border-radius: 8px;
+  }
+
+  @media (max-width: 800px) {
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
   }
 `;
 

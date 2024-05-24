@@ -39,6 +39,20 @@
         "title-music-ocean": "Ocean Sounds",
         "title-music-fire": "Bonfire Sounds",
         "title-music-rain": "Rain sounds",
-        "title-music-nat": "Nature sounds"
+        "title-music-nat": "Nature sounds",
+
+        "about-app": "About the Application",
+        "about-p1":"It is an application that allows you to put into practice the concepts of Pomodoro, a time management technique that can help you focus on any task, such as studying, writing, programming or research, through timed intervals, known as \"cycles\".",
+        "about-p2": "The app offers a flexible approach, allowing you to customize the length of each cycle according to your preferences, making it possible to transition from short cycles to longer focus sessions.",
+        "more-here": "Find out more here.",
+        "pomo-author": "Who is behind the technique?",
+        "pomo-p1": "The Pomodoro Technique was introduced by Francesco Cirillo in the late 1980s and is based on the idea that short, focused periods of work are more effective. You might be surprised at the results you can achieve just by managing your time!",
+        "tutorial": "Usage Guide",
+        "tutorial-p1": "When you open the app, you will find a timer on the home page. Here, you can name your task and set the amount of minutes you want to dedicate to it. When the time reaches zero, a sound will sound, indicating the end of the work session.",
+        "tutorial-p2": "On the second screen, we reserve a space for rest, the coffee break. Set how many minutes you want to relax, and when the time is up, an alarm will remind you to get back to work.",
+        "tutorial-p3": "The last screen displays the entire history of cycles performed. These cycles are automatically saved, allowing you to pick up right where you left off, even after closing the app. Additionally, we offer the option to delete old cycles or those that no longer make sense to be there! Deleting cycles provides good flexibility and customization to your history.",
+        "tutorial-p4": "It is also possible to change the application language to one of the 4 available languages: Portuguese, English, Spanish and French.",
+        "tutorial-p5": "Finally, on the left side you will find a selection of soundtracks to make the environment more pleasant and help you concentrate.",
+        "tutorial-p6": "With this app, focus and productivity are at your fingertips, providing an effective and customizable way to manage your time and accomplish your tasks more efficiently."
     }
 }

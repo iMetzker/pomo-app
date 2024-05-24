@@ -50,11 +50,9 @@
         "tutorial": "Guia de Utilização",
         "tutorial-p1": "Ao abrir o aplicativo, você encontrará um timer na página inicial. Aqui, você pode nomear sua tarefa e definir a quantidade de minutos que deseja dedicar a ela. Quando o tempo chegar a zero, um som será disparado, indicando o final da sessão de trabalho.",
         "tutorial-p2": "Na segunda tela, reservamos um espaço para descanso, a pausa para o café. Defina quantos minutos deseja relaxar, e quando o tempo se esgotar, um alarme o lembrará de retornar ao trabalho.",
-        "tutorial-p3": "",
-        "tutorial-p4": "",
-        "feedback": "Deixe Um Feedback",
-        "feedback-p1": "Para mandar sugestões, dúvidas ou deixar uma mensagem maneira",
-        "click-here": "clique aqui."
-
+        "tutorial-p3": "A última tela exibe todo o histórico de ciclos realizados. Esses ciclos são automaticamente salvos, permitindo que você retome exatamente de onde parou, mesmo após fechar o aplicativo. Além disso, oferecemos a opção de excluir ciclos antigos ou que não façam mais sentido estarem alí! A exclusão de ciclos proporciona uma boa flexibilidade e personalização ao seu histórico.",
+        "tutorial-p4": "Também é possível alterar a linguagem do aplicativo em um dos 4        idiomas disponíveis: Português, Inglês, Espanhol e Francês.",
+        "tutorial-p5": "Por fim, ao lado esquerdo você encontrará uma seleção de faixas sonoras para tornar o ambiente mais agradével e te ajudar a se concentrar.",
+        "tutorial-p6": "Com esse aplicativo, o foco e a produtividade estão ao alcance de suas mãos, proporcionando uma maneira eficaz e personalizável de gerenciar seu tempo e realizar suas tarefas de maneira mais eficiente."
     }
 }

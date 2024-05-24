@@ -40,24 +40,23 @@ export const SoundsContainer = styled.div`
         color: ${(props) => props.theme["purple-400"]};
       }
     }
+
+    @media (max-width: 745px) {
+      width: 1.5rem;
+    height: 1.5rem;
+  }
   }
 
   @media (max-width: 835px) {
+    justify-content: center;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    bottom: -5rem;
+    bottom: -6rem;
     left: 50%;
     transform: translateX(-50%);
-  }
 
-  @media (max-width: 745px) {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    bottom: -5rem;
-    left: 0;
-    
-    transform: translateX(0%);
+    width: 100%;
+    padding-bottom: 2rem;
   }
 `;

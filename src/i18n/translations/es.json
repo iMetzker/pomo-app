@@ -39,6 +39,20 @@
         "title-music-ocean": "Sonidos del océano",
         "title-music-fire": "Sonidos de hoguera",
         "title-music-rain": "Sonidos de lluvia",
-        "title-music-nat": "Sonidos de la naturaleza"
+        "title-music-nat": "Sonidos de la naturaleza",
+
+        "about-app": "Acerca de la aplicación",
+        "about-p1":"Es una aplicación que te permite poner en práctica los conceptos de Pomodoro, una técnica de gestión del tiempo que puede ayudarte a concentrarte en cualquier tarea, como estudiar, escribir, programar o investigar, a través de intervalos cronometrados, conocidos como \"ciclos\".",
+        "about-p2": "La aplicación ofrece un enfoque flexible que le permite personalizar la duración de cada ciclo según sus preferencias, lo que permite la transición de ciclos cortos a sesiones de concentración más largas.",
+        "more-here": "Descubra más aquí.",
+        "pomo-author": "¿Quién está detrás de la técnica?",
+        "pomo-p1": "La Técnica Pomodoro fue introducida por Francesco Cirillo a finales de la década de 1980 y se basa en la idea de que los períodos de trabajo cortos y concentrados son más efectivos. ¡Quizás te sorprendas de los resultados que puedes lograr simplemente administrando tu tiempo!",
+        "tutorial": "Guía de uso",
+        "tutorial-p1": "Cuando abras la aplicación, encontrarás un temporizador en la página de inicio. Aquí puedes nombrar tu tarea y establecer la cantidad de minutos que deseas dedicarle. Cuando el tiempo llegue a cero, sonará un sonido que indicará el final de la sesión de trabajo.",
+        "tutorial-p2": "En la segunda pantalla reservamos un espacio para el descanso, la pausa para el café. Establece cuántos minutos quieres relajarte y, cuando se acabe el tiempo, una alarma te recordará que debes volver al trabajo.",
+        "tutorial-p3": "La última pantalla muestra el historial completo de ciclos realizados. Estos ciclos se guardan automáticamente, lo que le permite continuar justo donde lo dejó, incluso después de cerrar la aplicación. ¡Además, ofrecemos la opción de eliminar ciclos antiguos o aquellos que ya no tiene sentido que estén ahí! La eliminación de ciclos proporciona buena flexibilidad y personalización de su historial.",
+        "tutorial-p4": "También es posible cambiar el idioma de la aplicación a uno de los 4 idiomas disponibles: portugués, inglés, español y francés.",
+        "tutorial-p5": "Finalmente, en el lado izquierdo encontrarás una selección de bandas sonoras para hacer el ambiente más agradable y ayudarte a concentrarte.",
+        "tutorial-p6": "Con esta aplicación, la concentración y la productividad están a su alcance, proporcionando una forma eficaz y personalizable de administrar su tiempo y realizar sus tareas de manera más eficiente."
     }
 }
